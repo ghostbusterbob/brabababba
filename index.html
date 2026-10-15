@@ -17,6 +17,15 @@
 </head>
 
 <body>
+    <section class="password-gate" id="password-gate" aria-label="Website password">
+        <form class="password-card" id="password-form" aria-label="Enter the website password">
+            <label class="visually-hidden" for="site-password">Password</label>
+            <input id="site-password" name="password" type="password" placeholder="Your secret password" autocomplete="off" required>
+            <button class="button" type="submit">Enter</button>
+            <p class="password-error" id="password-error" aria-live="polite"></p>
+        </form>
+    </section>
+
     <header class="topbar">
         <a class="brand" href="#home">♡ <span>one year of us</span></a>
         <nav aria-label="Main navigation">

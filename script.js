@@ -1,3 +1,21 @@
+const passwordGate = document.querySelector('#password-gate');
+const passwordForm = document.querySelector('#password-form');
+if (passwordGate && passwordForm) {
+  const passwordInput = document.querySelector('#site-password');
+  const passwordError = document.querySelector('#password-error');
+  passwordInput.focus();
+  passwordForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (passwordInput.value.trim().toLowerCase() === 'i love u') {
+      passwordGate.classList.add('is-unlocking');
+      passwordGate.addEventListener('animationend', () => passwordGate.remove(), { once: true });
+    } else {
+      passwordError.textContent = 'Incorrect password. Try again.';
+      passwordInput.select();
+    }
+  });
+}
+
 const questions = [
   'What was your first “oh, I really like him” moment?',
   'Which tiny thing I do always makes you smile?',
