@@ -8,12 +8,40 @@ if (passwordGate && passwordForm) {
     event.preventDefault();
     if (passwordInput.value.trim().toLowerCase() === 'i love u') {
       passwordGate.classList.add('is-unlocking');
-      passwordGate.addEventListener('animationend', () => passwordGate.remove(), { once: true });
+      passwordGate.addEventListener('animationend', event => {
+        if (event.target !== passwordGate) return;
+        passwordGate.remove();
+        startPageMotion();
+      });
     } else {
       passwordError.textContent = 'Incorrect password. Try again.';
       passwordInput.select();
     }
   });
+}
+
+function startPageMotion() {
+  document.body.classList.add('motion-ready');
+  const motionTargets = document.querySelectorAll('.content-section, .letter-section, footer');
+  motionTargets.forEach((element, index) => {
+    element.classList.add('scroll-reveal');
+    element.style.setProperty('--reveal-delay', `${(index % 3) * 90}ms`);
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    motionTargets.forEach(element => element.classList.add('is-visible'));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  motionTargets.forEach(element => revealObserver.observe(element));
 }
 
 const questions = [

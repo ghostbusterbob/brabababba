@@ -82,3 +82,25 @@ body,nav a,.intro,.content-section>p,.letter-section>p,.byline,.simple-links a,.
 .password-error{min-height:20px;margin:12px 0 0;color:#bc354c;font-size:13px}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(prefers-reduced-motion:reduce){.password-gate.is-unlocking,.password-gate.is-unlocking .password-card{animation-duration:.01ms}}
+
+/* Playful motion that starts when the password gate opens. */
+.motion-ready .hero-copy{animation:hero-enter .75s cubic-bezier(.2,.75,.25,1) both}
+.motion-ready .hero-photo{animation:photo-enter .95s cubic-bezier(.2,.75,.25,1) 120ms both,gentle-float 4.2s ease-in-out 1.1s infinite}
+.motion-ready .museum-section.is-visible,.motion-ready .letter-section.is-visible{animation:gentle-float 5.2s ease-in-out infinite}
+.motion-ready .museum-item{animation:gentle-float 4.5s ease-in-out infinite}
+.motion-ready .museum-item:nth-child(3n + 2){animation-delay:-1.4s}
+.motion-ready .museum-item:nth-child(3n){animation-delay:-2.7s}
+.scroll-reveal{opacity:0;transform:translateY(26px) scale(.99);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.75,.25,1);transition-delay:var(--reveal-delay,0ms)}
+.scroll-reveal.is-visible{opacity:1;transform:translateY(0) scale(1)}
+.motion-ready .content-section .play-card,.motion-ready .content-section .watch-card,.motion-ready .museum-item,.motion-ready .question-card{transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease}
+.motion-ready .play-card:hover,.motion-ready .watch-card:hover,.motion-ready .museum-item:hover,.motion-ready .question-card:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 10px 22px #49383e14}
+.motion-ready button,.motion-ready .simple-links a{transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease}
+.motion-ready button:active,.motion-ready .simple-links a:active{transform:scale(.94)}
+.motion-ready .button:hover,.motion-ready .small-button:hover,.motion-ready .heart-button:hover{transform:translateY(-2px) scale(1.035)}
+.motion-ready .simple-links a:hover{transform:translateY(-3px) rotate(-1deg)}
+.motion-ready .brand{display:inline-block;animation:brand-pop .65s cubic-bezier(.2,.75,.25,1) both}
+@keyframes hero-enter{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes photo-enter{from{opacity:0;transform:translateX(28px) scale(.94)}to{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes brand-pop{0%{transform:scale(.85);opacity:.4}65%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+@keyframes gentle-float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}.motion-ready .hero-copy,.motion-ready .hero-photo,.motion-ready .brand,.motion-ready .museum-section.is-visible,.motion-ready .letter-section.is-visible,.motion-ready .museum-item{animation:none;translate:none}.motion-ready .play-card:hover,.motion-ready .watch-card:hover,.motion-ready .museum-item:hover,.motion-ready .question-card:hover,.motion-ready button:active,.motion-ready .simple-links a:active{transform:none}}
