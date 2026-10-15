@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff7f3">
+    <meta name="description" content="A little website for our first year together.">
+    <title>One Year of Us ♡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <a class="brand" href="#home">♡ <span>one year of us</span></a>
+        <nav aria-label="Main navigation">
+            <a href="#silly">Things to do</a>
+            <a href="#watch">Watch together</a>
+            <a href="#games">Questions</a>
+            <a href="#museum">Picture museum</a>
+            <a href="#letter">Letter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">HAPPY FIRST ANNIVERSARY ♡</p>
+                <h1>ONE YEAR WITH MY BABY<br><em></em></h1>
+                <p class="intro">A little website for my favorite person. </p>
+                <a class="button" href="#silly">Take a look around ↓</a>
+            </div>
+            <div class="hero-photo">
+                <img src="img/IMG_6025.jpg" alt="A favorite photo of us">
+                <b class="sticker">cutest couple<br>on the internet</b>
+            </div>
+        </section>
+
+        <section class="content-section" id="silly">
+            <p class="eyebrow">01 · THINGS TO DO</p>
+            <h2>Things we can do</h2>
+            <p>Some very important websites for doing absolutely nothing together.</p>
+            <div class="activity-row">
+                <div class="play-card"><span class="play-icon">🎲</span>
+                    <div><b id="silly-pick">Roll for a silly activity</b><small id="silly-caption">One click, one
+                            ridiculous
+                            mission</small></div><a class="small-button" id="silly-link"
+                        href="https://pointerpointer.com/" target="_blank" rel="noreferrer">Roll!</a>
+                </div>
+                <a class="watch-card" id="watch" href="https://watch.hyperbeam.com/" target="_blank" rel="noreferrer">
+                    <span class="watch-icon" aria-hidden="true">▶</span>
+                    <span class="watch-copy"><small>DATE NIGHT</small><b>Watch movies & anime together</b><span>Start a
+                            Hyperbeam watch party ↗</span></span>
+                </a>
+            </div>
+            <div class="simple-links"><a href="https://pointerpointer.com/" target="_blank" rel="noreferrer">Pointer
+                    Pointer ↗</a><a href="https://quickdraw.withgoogle.com/" target="_blank" rel="noreferrer">Quick,
+                    Draw! ↗</a><a href="https://theuselessweb.com/" target="_blank" rel="noreferrer">The Useless Web
+                    ↗</a><a href="https://neal.fun/" target="_blank" rel="noreferrer">Neal.fun ↗</a></div>
+        </section>
+
+        <section class="content-section question-section" id="games">
+            <p class="eyebrow">02 · YOUR TURN</p>
+            <h2>Couple questions</h2>
+            <div class="question-card"><span class="question-sticker">♡</span>
+                <p id="question-text" aria-live="polite">What was your first “oh, I really like them” moment?</p>
+                <div class="question-controls"><button class="button" id="question-button" type="button">Another
+                        question ↗</button><span id="question-count">1 / 8</span></div>
+            </div>
+        </section>
+
+        <section class="content-section museum-section" id="museum">
+            <p class="eyebrow">03 · YOUR FAVORITE MOMENTS</p>
+            <h2>W SlideShow</h2>
+            <div class="museum-grid">
+                <figure class="museum-item"><img src="photos/photo-01.jpg" alt="A favorite photo of us"><span
+                        class="museum-empty">Add <b>photo-01</b> to the photos folder</span></figure>
+                <figure class="museum-item"><img src="photos/photo-02.jpg" alt="A favorite memory together"><span
+                        class="museum-empty">Add <b>photo-02</b> to the photos folder</span></figure>
+                <figure class="museum-item"><img src="photos/photo-03.jpg" alt="A favorite memory together"><span
+                        class="museum-empty">Add <b>photo-03</b> to the photos folder</span></figure>
+                <figure class="museum-item"><img src="photos/photo-04.jpg" alt="A favorite memory together"><span
+                        class="museum-empty">Add <b>photo-04</b> to the photos folder</span></figure>
+                <figure class="museum-item"><img src="photos/photo-05.jpg" alt="A favorite memory together"><span
+                        class="museum-empty">Add <b>photo-05</b> to the photos folder</span></figure>
+                <figure class="museum-item"><img src="photos/photo-06.jpg" alt="A favorite memory together"><span
+                        class="museum-empty">Add <b>photo-06</b> to the photos folder</span></figure>
+            </div>
+        </section>
+
+
+
+        <section class="letter-section" id="letter">
+            <p class="eyebrow">A LITTLE NOTE FOR YOU</p>
+            <h2>Hey, my love. ♡</h2>
+            <p>I can’t believe we’ve already had a whole year of <em>tung tung tung sahur</em>, <em>movie
+                    nights</em>, and
+                making ordinary days feel like the best ones.</p>
+            <p>Thank you for being my favorite person to laugh with and do nothing with. I’d pick you every time, even
+                when u blow on my belly</p>
+            <p>Happy first anniversary. Here’s to everything we haven’t done yet.</p>
+            <p class="signature">I love U,<br><strong>Jaysen</strong></p><button class="heart-button" id="love-button"
+                type="button">Tap for a little extra love ♡</button>
+            <p class="love-message" id="love-message" aria-live="polite"></p>
+        </section>
+    </main>
+    <button class="heart-rain-toggle" id="heart-rain-button" type="button" aria-label="Make hearts rain">♡ Hearts</button>
+    <footer>Made with love ♡ · <a href="#home">Back to top ↑</a></footer>
+    <div class="starfield" id="starfield" aria-hidden="true"></div>
+
+</body>
+
+</html>
